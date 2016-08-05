@@ -1,0 +1,176 @@
+/* CSS declarations go here */
+body {
+	background: black;
+	color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+button {
+	margin: 15px;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 1.5em;
+	background: #392;
+	color: #F9F;
+}
+
+
+
+.blueinput {
+	margin: 20px;
+	padding: 5px;
+	font-size: 1.5em;
+	background: blue;
+	color: white;
+	margin: 10px;
+	text-align: center;
+}
+
+.redinput {
+	margin: 20px;
+	padding: 5px;
+	font-size: 1.5em;
+	background: red;
+	color: white;
+	margin: 10px;
+	text-align: center;
+}
+
+.families {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.blue {
+	display: inline;
+
+}
+.red {
+	display: inline;
+
+}
+
+.app {
+	margin: 5px;
+	padding: 25px;
+	background: -webkit-radial-gradient(red, blue); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(red, blue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(red, blue); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+}
+
+.answers-box {
+	background: url("/Background5.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 977px;
+    height: 550px;
+    margin: 0 auto;
+}
+
+.newquestion {
+	margin: 10px;
+}
+
+.points {
+	font-size: 2em;
+}
+
+.question {
+	margin: 10px 50px;
+	padding: 5px;
+	font-size: 3em;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.big {
+	height: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.small {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	height: 72px;	 
+}
+
+
+
+.table {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#answer1 { background: url("/answer1.jpg"); }
+#answer2 { background: url("/answer2.jpg"); }
+#answer3 { background: url("/answer3.jpg"); }
+#answer4 { background: url("/answer4.jpg"); }
+#answer5 { background: url("/empty.jpg"); }
+#answer6 { background: url("/empty.jpg"); }
+#answer7 { background: url("/empty.jpg"); }
+#answer8 { background: url("/empty.jpg"); }
+
+.answerbox {
+	position: absolute;
+	top: 10px;
+	line-height: 100px;
+	height: 100px;
+	text-align: center;
+	background: #222;
+	width: 75%;
+	overflow: scroll;
+	font-size: 1.5em;
+}
+
+.percentanswerbox {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	line-height: 100px;
+	height: 100px;
+	text-align: center;
+	background: #822;
+	width: 25%;
+	font-size: 1.5em;
+}
+
+
+.front {
+  transform: rotatey(0deg) rotatex(0deg) translatez(50px);
+}
+.side {
+  transition: transform 0.5s ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.top {
+  transform: rotatex(90deg) translatez(50px);
+}
+.answer {
+  position: relative;
+  height: 112px;
+  width: 424px;
+  perspective: 1000px;
+  transition: transform .65s;
+  transform-style: preserve-3d;
+
+}
+.answer.show-top .top {
+  transform: rotatex(0deg) translatez(50px);
+}
+.answer.show-top .front {
+  transform: rotatex(-90deg) translatez(50px);
+}

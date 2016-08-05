@@ -1,0 +1,102 @@
+<head>
+  <title>FamilyFeud</title>
+</head>
+
+<body>
+{{> landing}}
+
+{{> four}}
+
+
+</body>
+
+<template name="landing">
+		<div class="app">
+	
+	 		<img src="/ThreeX.png" class="big" data-bind="if: threeXvisible"/>
+	 		<img src="/TwoX.png" class="big" data-bind="if: twoXvisible" />
+	 		<img src="/OneX.png" class="big" data-bind="if: oneXvisible"/>
+			
+			<div class="question">
+				<div data-bind="text: question"></div>
+	 		</div>
+	 		<div class="answers"> 
+	 			<table>
+	 				<tr>
+	 					<th class="answer show-top" id="answer1-3d">
+					      <div class="top side"  id="answer1"></div>
+					      <div class="front side">
+					      	<div class="answerbox" data-bind="text: answer1"></div>
+					      	<div class="percentanswerbox" data-bind="text: percentAnswer1"></div>
+					      </div>	 						
+	 					</th>
+	 					<th class="answer show-top"  id="answer5-3d">
+					      <div class="top side"  id="answer5"></div>
+					      <div class="front side">
+					      	<div class="answerbox" data-bind="text: answer5"></div>
+					      	<div class="percentanswerbox" data-bind="text: percentAnswer5"></div>
+					      </div>
+	 					</th>
+	 				</tr>
+	 				<tr>
+	 					<th class="answer show-top"  id="answer2-3d">
+					      <div class="top side"  id="answer2"></div>
+					      <div class="front side">
+					      	<div class="answerbox" data-bind="text: answer2"></div>
+					      	<div class="percentanswerbox" data-bind="text: percentAnswer2"></div>
+					      </div>
+	 					</th>
+	 					<th class="answer show-top">
+					      <div class="top side"  id="answer6"></div>
+					      <div class="front side"></div>
+	 					</th>
+	 				</tr>
+	 				<tr>
+	 					<th class="answer show-top"  id="answer3-3d">
+					      <div class="top side"  id="answer3"></div>
+					      <div class="front side">
+					      	<div class="answerbox" data-bind="text: answer3"></div>
+					      	<div class="percentanswerbox" data-bind="text: percentAnswer3"></div>
+					      </div>
+	 					</th>
+	 					<th class="answer show-top">
+					      <div class="top side"  id="answer7"></div>
+					      <div class="front side">
+					      </div>
+	 					</th>
+	 				</tr>
+	 				<tr>
+	 					<th class="answer show-top"  id="answer4-3d">
+					      <div class="top side"  id="answer4"></div>
+					      <div class="front side">
+					      	<div class="answerbox" data-bind="text: answer4"></div>
+					      	<div class="percentanswerbox" data-bind="text: percentAnswer4"></div>
+					      </div>
+	 					</th>
+	 					<th class="answer show-top">
+					      <div class="top side"  id="answer8"></div>
+					      <div class="front side"></div>
+	 					</th>
+	 				</tr>
+	 			</table>
+			    <button id="show-front">flip</button>  
+
+	 		</div>
+
+	 		<div class="families"> 
+	 		<button data-bind="click: newquestion, if: buttonsvisible" class="newquestion">New question</button>		
+		 		<div class="blue">
+		 			<form>
+		 				<input data-bind="value: blueanswer, returnKey: testblue" class="blueinput" placeholder="Blue answer..."/>
+		 				<span class="points">Blue points: <span data-bind="text: bluepoints"></span></span>
+		 			</form>
+		 		</div>
+		 		<div class="red">
+		 			<form>
+		 				<input data-bind="value: redanswer, returnKey: testred" class="redinput" placeholder="Red answer..."/>
+		 				<span class="points">Red points: <span data-bind="text: redpoints"></span></span>
+		 			</form>
+		 		</div>
+		 	</div>
+ 		</div>
+</template>
